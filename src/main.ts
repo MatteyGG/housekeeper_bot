@@ -5,6 +5,7 @@ import { connectDB } from "./core/database/database-connection";
 import { registerInfoCommands } from "./core/info/info-commands";
 import { registerAuthCommands } from "./core/auth/auth-commands";
 import { registerFinanceModule } from "./modules/finance/finance-module";
+import { requireAuth } from "./core/auth/auth-middleware";
 
 // Инициализируем модули в правильном порядке
 function initializeModules() {
@@ -13,7 +14,6 @@ function initializeModules() {
   registerAuthCommands();
   
   // 2. Подключаем middleware авторизации
-  const { requireAuth } = require("./core/auth/auth-middleware");
   bot.use(requireAuth);
   
   // 3. Регистрируем защищенные модули (требуют авторизации)

@@ -34,13 +34,33 @@ export const FinanceModuleInfo = {
       requiresAuth: true
     },
     {
-      command: "income",
-      description: "Добавить доход", 
+      command: "income", 
+      description: "Добавить доход",
       requiresAuth: true
     },
     {
       command: "report",
-      description: "Отчет за период",
+      description: "Отчет за период (день/неделя/месяц/всё время)",
+      requiresAuth: true
+    },
+    {
+      command: "excel_report",
+      description: "Экспорт отчета в Excel",
+      requiresAuth: true
+    },
+    {
+      command: "report_week",
+      description: "Отчет за неделю", 
+      requiresAuth: true
+    },
+    {
+      command: "report_day",
+      description: "Отчет за день",
+      requiresAuth: true
+    },
+    {
+      command: "report_all", 
+      description: "Отчет за всё время",
       requiresAuth: true
     }
   ]

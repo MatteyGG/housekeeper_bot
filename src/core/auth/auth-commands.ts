@@ -1,3 +1,4 @@
+// src/core/auth/auth-commands.ts
 import { bot } from "../bot/bot-instance";
 import bcrypt from "bcrypt";
 import { Keyboard } from "grammy";

@@ -1,3 +1,5 @@
+// src/core/info/info-system.ts
+
 export interface ModuleInfo {
   name: string;
   description: string;
