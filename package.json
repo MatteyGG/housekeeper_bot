@@ -1,0 +1,44 @@
+{
+  "name": "housekeeper_bot",
+  "version": "1.0.0",
+  "description": "Modular Telegram bot for family finance and task management",
+  "type": "module",
+  "main": "dist/main.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc --noEmit false",
+    "dev": "tsc-watch --onSuccess \"tsx ./src/main.ts\"",
+    "start": "tsc && tsx ./src/main.ts",
+    "start:force": "tsx ./src/main.ts",
+    "clean": "rimraf dist",
+    "clean:build": "npm run clean && npm run build",
+    "db:push": "prisma db push",
+    "db:studio": "prisma studio",
+    "postinstall": "prisma generate"
+  },
+  "dependencies": {
+    "@prisma/client": "6.5.0",
+    "bcrypt": "5.1.1",
+    "dotenv": "16.4.7",
+    "grammy": "1.35.0",
+    "tsx": "^4.20.4"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "5.0.2",
+    "@types/node": "22.13.11",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "jest": "^29.0.0",
+    "prettier": "^3.0.0",
+    "prisma": "6.5.0",
+    "rimraf": "^5.0.0",
+    "tsc-watch": "^6.3.1",
+    "typescript": "5.8.2"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
