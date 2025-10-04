@@ -6,6 +6,7 @@ import { registerInfoCommands } from "./core/info/info-commands";
 import { registerAuthCommands } from "./core/auth/auth-commands";
 import { registerFinanceModule } from "./modules/finance/finance-module";
 import { requireAuth } from "./core/auth/auth-middleware";
+import { registerTodoModule } from "./modules/todo/todo-module";
 
 // Инициализируем модули в правильном порядке
 function initializeModules() {
@@ -18,6 +19,7 @@ function initializeModules() {
   
   // 3. Регистрируем защищенные модули (требуют авторизации)
   registerFinanceModule();
+  registerTodoModule();
 }
 
 async function main() {

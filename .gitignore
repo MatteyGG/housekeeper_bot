@@ -10,3 +10,6 @@ package-lock.json
 
 # Directories for local development
 dist/
+
+# Directories for local tasks
+task.md
